@@ -18,9 +18,9 @@ for (@week) {
     $_ =~ s/\//-/g;
     $stamp_local = localtime->strptime($_, '%Y-%m-%d');
     if ($switch eq 'Sun') {
-        $stamp_day = $stamp_local->fullday;
-    } elsif ($switch eq 'Sunday') {
         $stamp_day = $stamp_local->wdayname;
+    } elsif ($switch eq 'Sunday') {
+        $stamp_day = $stamp_local->fullday;
     } elsif ($switch eq '日') {
         $stamp_day = $stamp_local->wdayname(qw{日 月 火 水 木 金 土});
     } elsif ($switch eq '日曜日') {
@@ -30,7 +30,8 @@ for (@week) {
 }
 
 __DATA__
-2014/3/4
-2014/3/21
-2014/3/26
-2014/3/27
+2015/2/4
+2015/2/21
+2015/2/26
+2015/2/27
+
